@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Global Learning Hub | Tuition Centre in Bahria Enclave, Islamabad</title>
+<meta name="description" content="Campus Global Learning Hub is a 5.0-rated tuition centre in Bahria Enclave, Islamabad. Qualified teachers, small-group attention and exam-focused preparation for Primary, Matric, FSc and O/A Level students. Open 12 PM – 9 PM. Call 0318 3281767.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     EDIT COLOURS HERE — change these 5 values to re-theme the site
+     ============================================================ */
+  :root{
+    --navy:   #122B45;   /* headings, dark sections */
+    --green:  #0E6B4F;   /* buttons, links, accents */
+    --green-d:#0A5440;   /* button hover */
+    --gold:   #C9952D;   /* stars, rating stamp */
+    --paper:  #F6F8F7;   /* light section background */
+    --white:  #FFFFFF;
+    --ink:    #2B3A4A;   /* body text */
+    --line:   #E2E8E4;   /* borders */
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(18,43,69,.08);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+  body{
+    font-family:'Manrope',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.65;
+    font-size:16.5px;
+  }
+  h1,h2,h3{font-family:'Bitter',Georgia,serif;color:var(--navy);line-height:1.2}
+  img{max-width:100%}
+  a{color:var(--green)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  section{padding:78px 0}
+  .eyebrow{
+    display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--green);margin-bottom:12px;
+  }
+  .section-title{font-size:clamp(26px,3.4vw,36px);margin-bottom:14px}
+  .section-intro{max-width:640px;color:#51606F;margin-bottom:40px}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:13px 24px;border-radius:10px;font-weight:700;font-size:15.5px;
+    text-decoration:none;border:2px solid transparent;cursor:pointer;
+    transition:transform .15s ease, background .15s ease, box-shadow .15s ease;
+    font-family:'Manrope',sans-serif;
+  }
+  .btn svg{flex:none}
+  .btn:hover{transform:translateY(-2px)}
+  .btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+  .btn-primary{background:var(--green);color:#fff;box-shadow:0 6px 18px rgba(14,107,79,.28)}
+  .btn-primary:hover{background:var(--green-d)}
+  .btn-outline{border-color:var(--navy);color:var(--navy);background:transparent}
+  .btn-outline:hover{background:var(--navy);color:#fff}
+  .btn-light{background:#fff;color:var(--navy)}
+  .btn-light:hover{background:var(--paper)}
+  .btn-wa{background:#1FA855;color:#fff}
+  .btn-wa:hover{background:#178A45}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .brand-mark{
+    width:42px;height:42px;border-radius:10px;background:var(--navy);
+    display:grid;place-items:center;color:var(--gold);
+    font-family:'Bitter',serif;font-weight:700;font-size:18px;
+  }
+  .brand-name{font-family:'Bitter',serif;font-weight:700;color:var(--navy);font-size:17px;line-height:1.15}
+  .brand-name span{display:block;font-family:'Manrope',sans-serif;font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+  .nav-links{display:flex;gap:26px;list-style:none}
+  .nav-links a{color:var(--navy);text-decoration:none;font-weight:600;font-size:15px}
+  .nav-links a:hover{color:var(--green)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .nav-cta .btn{padding:10px 18px;font-size:14.5px}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:6px}
+  .menu-btn svg{display:block}
+
+  /* ---------- Hero ---------- */
+  .hero{background:linear-gradient(180deg,var(--paper) 0%, #fff 100%);padding:84px 0 70px;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(32px,4.6vw,50px);margin:14px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--green)}
+  .hero p.lead{font-size:18px;color:#4A5968;max-width:540px;margin-bottom:30px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-bottom:34px}
+  .hero-facts{display:flex;flex-wrap:wrap;gap:26px;border-top:1px solid var(--line);padding-top:22px}
+  .fact b{display:block;font-family:'Bitter',serif;color:var(--navy);font-size:18px}
+  .fact span{font-size:13.5px;color:#5B6976}
+
+  /* Report-card style rating panel — the signature element */
+  .rating-card{
+    position:relative;background:#fff;border:1px solid var(--line);
+    border-radius:var(--radius);box-shadow:var(--shadow);padding:34px 30px 30px;
+  }
+  .rating-card::before{ /* notebook margin line */
+    content:"";position:absolute;top:0;bottom:0;left:22px;width:2px;background:rgba(201,149,45,.35);
+  }
+  .rating-card h3{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-family:'Manrope',sans-serif;color:#6B7884;font-weight:800;margin-bottom:14px;padding-left:20px}
+  .rating-row{display:flex;align-items:center;gap:16px;padding-left:20px;margin-bottom:10px}
+  .rating-num{font-family:'Bitter',serif;font-weight:700;font-size:56px;color:var(--navy);line-height:1}
+  .stars{color:var(--gold);font-size:21px;letter-spacing:3px}
+  .rating-sub{padding-left:20px;color:#5B6976;font-size:14.5px;margin-bottom:18px}
+  .rating-quote{
+    margin:0 0 6px;padding:14px 16px 14px 20px;background:var(--paper);
+    border-left:3px solid var(--green);border-radius:0 10px 10px 0;
+    font-size:14.5px;color:#42505E;font-style:italic;
+  }
+  .rating-quote b{display:block;font-style:normal;font-size:12.5px;color:var(--navy);margin-top:6px}
+  .stamp{
+    position:absolute;top:-34px;right:-18px;width:112px;height:112px;
+    transform:rotate(10deg);filter:drop-shadow(0 6px 14px rgba(18,43,69,.18));
+  }
+  @keyframes stampIn{from{opacity:0;transform:rotate(10deg) scale(1.4)}to{opacity:1;transform:rotate(10deg) scale(1)}}
+  .stamp{animation:stampIn .5s ease .4s backwards}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .about-points{list-style:none;display:grid;gap:14px;margin-top:8px}
+  .about-points li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
+  .tick{flex:none;width:24px;height:24px;border-radius:50%;background:rgba(14,107,79,.12);color:var(--green);display:grid;place-items:center;font-size:13px;font-weight:800;margin-top:2px}
+  .about-card{
+    background:var(--navy);color:#E7EDF3;border-radius:var(--radius);
+    padding:36px 32px;box-shadow:var(--shadow);
+  }
+  .about-card h3{color:#fff;font-size:21px;margin-bottom:14px}
+  .about-card p{color:#C4D0DC;font-size:15.5px;margin-bottom:18px}
+  .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-top:1px solid rgba(255,255,255,.16);padding-top:20px}
+  .about-stats b{display:block;font-family:'Bitter',serif;font-size:24px;color:var(--gold)}
+  .about-stats span{font-size:12.5px;color:#AFBECB}
+
+  /* ---------- Subjects ---------- */
+  .subjects{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .subject-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 22px;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .subject-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(14,107,79,.4)}
+  .subject-card .icon{
+    width:44px;height:44px;border-radius:10px;background:rgba(14,107,79,.1);
+    color:var(--green);display:grid;place-items:center;margin-bottom:14px;
+  }
+  .subject-card h3{font-size:17.5px;margin-bottom:6px}
+  .subject-card p{font-size:14px;color:#5B6976}
+  .levels-note{
+    margin-top:26px;background:#fff;border:1px dashed rgba(14,107,79,.45);border-radius:12px;
+    padding:16px 20px;font-size:15px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+  }
+  .levels-note b{color:var(--navy)}
+
+  /* ---------- Why choose us ---------- */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .why-item{
+    border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;background:#fff;
+    transition:border-color .18s ease, box-shadow .18s ease;
+  }
+  .why-item:hover{border-color:rgba(201,149,45,.6);box-shadow:var(--shadow)}
+  .why-item h3{font-size:17px;margin:12px 0 6px}
+  .why-item p{font-size:14.5px;color:#5B6976}
+  .why-num{font-family:'Bitter',serif;color:var(--gold);font-weight:700;font-size:15px;letter-spacing:.06em}
+
+  /* ---------- Reviews ---------- */
+  .reviews{background:var(--navy)}
+  .reviews .eyebrow{color:var(--gold)}
+  .reviews .section-title{color:#fff}
+  .reviews .section-intro{color:#B9C6D3}
+  .g-badge{
+    display:inline-flex;align-items:center;gap:12px;background:#fff;border-radius:12px;
+    padding:13px 20px;margin-bottom:38px;box-shadow:var(--shadow);
+  }
+  .g-badge .stars{font-size:17px}
+  .g-badge b{font-family:'Bitter',serif;color:var(--navy);font-size:19px}
+  .g-badge span{font-size:13.5px;color:#5B6976}
+  .review-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .review-card{
+    background:#fff;border-radius:var(--radius);padding:24px 24px 22px;
+    display:flex;flex-direction:column;gap:12px;
+    transition:transform .18s ease;
+  }
+  .review-card:hover{transform:translateY(-4px)}
+  .review-card .stars{font-size:15px}
+  .review-card p{font-size:14.8px;color:#3D4B59;flex:1}
+  .reviewer{display:flex;align-items:center;gap:11px;border-top:1px solid var(--line);padding-top:14px}
+  .avatar{width:38px;height:38px;border-radius:50%;background:var(--paper);color:var(--green);font-weight:800;display:grid;place-items:center;font-size:15px;border:1px solid var(--line)}
+  .reviewer b{display:block;color:var(--navy);font-size:14.5px;line-height:1.2}
+  .reviewer span{font-size:12px;color:#7A8794}
+  .reviews-cta{text-align:center;margin-top:36px}
+
+  /* ---------- Location ---------- */
+  .loc-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:stretch}
+  .loc-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px}
+  .loc-card h3{font-size:19px;margin-bottom:8px}
+  .loc-row{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+  .loc-row:last-of-type{border-bottom:0}
+  .loc-row .icon{flex:none;width:38px;height:38px;border-radius:10px;background:#fff;border:1px solid var(--line);color:var(--green);display:grid;place-items:center}
+  .loc-row b{display:block;color:var(--navy);font-size:14px}
+  .map-frame{
+    border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+    min-height:340px;background:var(--paper);position:relative;box-shadow:var(--shadow);
+  }
+  .map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--paper);border-top:1px solid var(--line)}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px}
+  .contact-info .btn{margin:6px 10px 6px 0}
+  .form-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow)}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field.full{grid-column:1/-1}
+  .field label{font-size:13.5px;font-weight:700;color:var(--navy)}
+  .field input,.field select,.field textarea{
+    font-family:'Manrope',sans-serif;font-size:15px;color:var(--ink);
+    padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;
+    transition:border-color .15s ease;
+  }
+  .field textarea{resize:vertical;min-height:104px}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green)}
+  .form-note{font-size:13px;color:#7A8794;margin-top:12px}
+  #form-thanks{
+    display:none;margin-top:14px;padding:13px 16px;border-radius:10px;
+    background:rgba(14,107,79,.1);color:var(--green-d);font-weight:600;font-size:14.5px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy);color:#B9C6D3;padding:54px 0 28px}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:34px}
+  footer h4{color:#fff;font-family:'Bitter',serif;font-size:16.5px;margin-bottom:13px}
+  footer p,footer a{font-size:14.5px;color:#B9C6D3;text-decoration:none}
+  footer a:hover{color:#fff}
+  .footer-links{list-style:none;display:grid;gap:9px}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;font-size:13.5px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:980px){
+    .cards{grid-template-columns:repeat(2,1fr)}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+    .review-cards{grid-template-columns:repeat(2,1fr)}
+    .hero-grid{grid-template-columns:1fr;gap:46px}
+    .about-grid,.loc-grid,.contact-grid{grid-template-columns:1fr}
+    .stamp{top:-30px;right:6px}
+  }
+  @media (max-width:680px){
+    section{padding:58px 0}
+    .nav-links,.nav-cta .btn-outline{display:none}
+    .menu-btn{display:block}
+    .mobile-menu{
+      display:none;flex-direction:column;gap:4px;padding:10px 22px 18px;
+      background:#fff;border-bottom:1px solid var(--line);
+    }
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{padding:11px 4px;text-decoration:none;color:var(--navy);font-weight:700;border-bottom:1px solid var(--paper)}
+    .cards,.why-grid,.review-cards,.form-grid{grid-template-columns:1fr}
+    .field.full{grid-column:auto}
+    .hero{padding:56px 0 54px}
+    .rating-num{font-size:46px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="brand-mark">C</span>
+      <span class="brand-name">Campus Global Learning Hub
+        <span>Bahria Enclave · Islamabad</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#subjects">Subjects</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-outline" href="https://maps.app.goo.gl/6enXa11Tktm8vdiEA" target="_blank" rel="noopener">Get Directions</a>
+      <a class="btn btn-primary" href="tel:03183281767">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        Call Now
+      </a>
+      <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('mmenu').classList.toggle('open')">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#122B45" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mmenu">
+    <a href="#about">About</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#why">Why Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="https://maps.app.goo.gl/6enXa11Tktm8vdiEA" target="_blank" rel="noopener">Get Directions</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Tuition Centre in Bahria Enclave, Islamabad</span>
+      <h1>Quality Tuition for <em>Better Academic Results</em></h1>
+      <p class="lead">Campus Global Learning Hub helps students from primary classes to O/A Level understand concepts clearly, prepare confidently for exams and improve their grades — with qualified, supportive teachers and personal attention.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:03183281767">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          Call Now
+        </a>
+        <a class="btn btn-outline" href="https://maps.app.goo.gl/6enXa11Tktm8vdiEA" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          Get Directions
+        </a>
+        <a class="btn btn-wa" href="#contact">Book a Trial Class</a>
+      </div>
+      <div class="hero-facts">
+        <div class="fact"><b>5.0 ★</b><span>Google rating</span></div>
+        <div class="fact"><b>12 PM – 9 PM</b><span>Open daily</span></div>
+        <div class="fact"><b>Primary – A Level</b><span>All major subjects</span></div>
+      </div>
+    </div>
+
+    <!-- Signature element: Google "report card" with rating stamp -->
+    <div class="rating-card">
+      <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="56" fill="#fff" stroke="#C9952D" stroke-width="3"/>
+        <circle cx="60" cy="60" r="44" fill="none" stroke="#C9952D" stroke-width="1.4" stroke-dasharray="3 3"/>
+        <path id="stampArc" d="M 60,60 m -36,0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="none"/>
+        <text font-family="Manrope, sans-serif" font-size="9.5" font-weight="800" fill="#C9952D" letter-spacing="2.2">
+          <textPath href="#stampArc">RATED 5.0 ON GOOGLE ★ BY PARENTS ★</textPath>
+        </text>
+        <text x="60" y="56" text-anchor="middle" font-family="Bitter, serif" font-size="24" font-weight="700" fill="#122B45">5.0</text>
+        <text x="60" y="73" text-anchor="middle" font-size="13" fill="#C9952D">★★★★★</text>
+      </svg>
+      <h3>Google Report Card</h3>
+      <div class="rating-row">
+        <span class="rating-num">5.0</span>
+        <div>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <div style="font-size:13px;color:#7A8794;font-weight:600">Google Reviews</div>
+        </div>
+      </div>
+      <p class="rating-sub">Rated by real parents and students in Islamabad.</p>
+      <blockquote class="rating-quote">
+        “The teachers are dedicated, the learning environment is positive, and my children have shown noticeable improvement in their studies.”
+        <b>— Sala Huddin, parent of 5th &amp; 7th class students</b>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow">About the Academy</span>
+      <h2 class="section-title">Helping students learn with clarity and confidence</h2>
+      <p>Campus Global Learning Hub is a tuition centre located in Sector A, Bahria Enclave, Islamabad. We support school and college students with structured after-school tuition that focuses on understanding — not memorising.</p>
+      <ul class="about-points">
+        <li><span class="tick">✓</span> Clear, step-by-step explanation of concepts in every subject</li>
+        <li><span class="tick">✓</span> Exam-focused preparation with regular tests and practice</li>
+        <li><span class="tick">✓</span> Personal attention so weaker areas are identified early</li>
+        <li><span class="tick">✓</span> Confidence building through encouragement and steady progress</li>
+        <li><span class="tick">✓</span> Regular communication with parents about performance</li>
+      </ul>
+    </div>
+    <div class="about-card">
+      <h3>A focused place to study, close to home</h3>
+      <p>Conveniently located in the basement of Dubai Islamic Bank, Sector A, Bahria Enclave — easy for parents to drop off and pick up. Classes run from 12 PM to 9 PM, so students can join after school at a time that suits them.</p>
+      <div class="about-stats">
+        <div><b>5.0★</b><span>Google rating</span></div>
+        <div><b>9 hrs</b><span>Open every day</span></div>
+        <div><b>8+</b><span>Subjects covered</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SUBJECTS ================= -->
+<section class="subjects" id="subjects">
+  <div class="wrap">
+    <span class="eyebrow">Subjects &amp; Programs</span>
+    <h2 class="section-title">Tuition support across all major subjects</h2>
+    <p class="section-intro">From primary classes to O/A Level, our qualified teachers cover the core subjects students need most.</p>
+    <div class="cards">
+      <div class="subject-card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM16.5 13l4 7h-8z"/></svg></div>
+        <h3>Mathematics</h3><p>Concept building, problem-solving practice and exam techniques.</p>
+      </div>
+      <div class="subject-card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4.2"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)"/></svg></div>
+        <h3>Physics</h3><p>Theory made simple, with numericals solved step by step.</p>
+      </div>
+      <div class="subject-card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9 3h6v2h-1v5l5 8.5c.8 1.3-.2 3-1.7 3H6.7c-1.5 0-2.5-1.7-1.7-3L10 10V5H9V3z"/></svg></div>
+        <h3>Chemistry</h3><p>Reactions, equations and past-paper focused preparation.</p>
+      </div>
+      <div class="subject-card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3c6 2 10 7 12 18M18 3C12 5 8 10 6 21"/></svg></div>
+        <h3>Biology</h3><p>Diagrams, terminology and structured answers for exams.</p>
+      </div>
+      <div class="subject-card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4h14a1 1 0 011 1v12a1 1 0 01-1 1h-6l1 2h2v2H8v-2h2l1-2H5a1 1 0 01-1-1V5a1 1 0 011-1zm1 2v9h12V6H6z"/></svg></div>
+        <h3>Computer Science</h3><p>Programming basics, theory and practical exam preparation.</p>
+      </div>
+      <div class="subject-card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v2H4zm0 4h16v2H4zm0 4h10v2H4zm0 4h7v2H4z"/></svg></div>
+        <h3>English</h3><p>Grammar, comprehension, essay writing and speaking confidence.</p>
+      </div>
+      <div class="subject-card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 2 8l10 5 8-4v6h2V8L12 3zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.5-7-3.5z"/></svg></div>
+        <h3>O Levels / IGCSE</h3><p>Cambridge-pattern teaching with past papers and marking practice.</p>
+      </div>
+      <div class="subject-card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v15H6V2zm8 1.5V8h4.5L14 3.5zM8 12h8v2H8v-2zm0 4h8v2H8v-2z"/></svg></div>
+        <h3>Matric / FSc</h3><p>Board-focused preparation aligned with the local syllabus.</p>
+      </div>
+    </div>
+    <div class="levels-note">
+      <b>Classes offered:</b> Primary &amp; middle school (Class 1–8) · Matric · FSc · O Level · A Level &nbsp;|&nbsp; Call <a href="tel:03183281767" style="font-weight:700">0318 3281767</a> to confirm subjects for your child's class.
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section id="why">
+  <div class="wrap">
+    <span class="eyebrow">Why Choose Us</span>
+    <h2 class="section-title">What parents can expect from us</h2>
+    <p class="section-intro">No exaggerated promises — just consistent teaching habits that help students improve.</p>
+    <div class="why-grid">
+      <div class="why-item"><span class="why-num">Teachers</span><h3>Experienced, qualified faculty</h3><p>Subject teachers who know the syllabus, the exams and how to explain difficult topics simply.</p></div>
+      <div class="why-item"><span class="why-num">Attention</span><h3>Personal attention</h3><p>Students are not lost in a crowd. Teachers know each student's strengths and weak areas.</p></div>
+      <div class="why-item"><span class="why-num">Exams</span><h3>Exam-focused preparation</h3><p>Past papers, practice tests and answer techniques aligned with each student's board or system.</p></div>
+      <div class="why-item"><span class="why-num">Progress</span><h3>Regular progress tracking</h3><p>Tests and assessments show clearly where a student is improving and where more work is needed.</p></div>
+      <div class="why-item"><span class="why-num">Clarity</span><h3>Clear explanations</h3><p>Concepts are taught step by step until the student genuinely understands — not just memorises.</p></div>
+      <div class="why-item"><span class="why-num">Parents</span><h3>Parent communication</h3><p>Parents are kept informed about attendance, performance and progress throughout the term.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Google Reviews</span>
+    <h2 class="section-title">What parents and students say</h2>
+    <p class="section-intro">All reviews below are real reviews from our Google Maps listing.</p>
+
+    <div class="g-badge">
+      <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 7.9-2.9l-3.9-3c-1.1.7-2.4 1.2-4 1.2-3.1 0-5.7-2.1-6.7-4.9H1.3v3.1C3.3 21.4 7.3 24 12 24z"/><path fill="#FBBC05" d="M5.3 14.4c-.2-.7-.4-1.5-.4-2.4s.1-1.6.4-2.4v-3H1.3C.5 8.2 0 10 0 12s.5 3.8 1.3 5.4l4-3z"/><path fill="#EA4335" d="M12 4.7c1.7 0 3.3.6 4.5 1.8l3.4-3.4C17.9 1.1 15.2 0 12 0 7.3 0 3.3 2.6 1.3 6.6l4 3.1c1-2.9 3.6-5 6.7-5z"/></svg>
+      <div>
+        <b>Rated 5.0 <span class="stars">★★★★★</span></b><br>
+        <span>on Google by parents and students</span>
+      </div>
+    </div>
+
+    <div class="review-cards">
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>"I would like to state that I am fully satisfied with the tuition services provided by the academy for my children studying in 5th and 7th classes. The teachers are dedicated, the learning environment is positive, and my children have shown noticeable improvement in their studies. I appreciate the efforts of the academy staff and wish them continued success. 👍"</p>
+        <div class="reviewer"><span class="avatar">S</span><div><b>Sala Huddin</b><span>Google review</span></div></div>
+      </div>
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>"One of the best institutions in Islamabad for students looking for highly educated and skilled teachers. I'm very satisfied by their environment 🙌🏼"</p>
+        <div class="reviewer"><span class="avatar">E</span><div><b>Elsa Salah</b><span>Google review</span></div></div>
+      </div>
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>"One of the best academies for O/A Level. The teachers are highly qualified and supportive."</p>
+        <div class="reviewer"><span class="avatar">U</span><div><b>Usma Naseer</b><span>Google review</span></div></div>
+      </div>
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>"Best academy in town, qualified faculty."</p>
+        <div class="reviewer"><span class="avatar">H</span><div><b>Hamid Alvi</b><span>Google review</span></div></div>
+      </div>
+      <div class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>"Good teachers. Highly recommend."</p>
+        <div class="reviewer"><span class="avatar">A</span><div><b>Anonymous</b><span>Google review</span></div></div>
+      </div>
+    </div>
+
+    <div class="reviews-cta">
+      <a class="btn btn-light" href="https://maps.app.goo.gl/6enXa11Tktm8vdiEA" target="_blank" rel="noopener">Read all reviews on Google →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCATION ================= -->
+<section id="location">
+  <div class="wrap">
+    <span class="eyebrow">Location</span>
+    <h2 class="section-title">Find us in Bahria Enclave</h2>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <div class="loc-row">
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+          <div><b>Address</b>Basement, Dubai Islamic Bank, Sector A, Bahria Enclave, Islamabad 44000, Pakistan</div>
+        </div>
+        <div class="loc-row">
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 10.4l4.2 2.5-.8 1.3L11 13V6h2v6.4z"/></svg></span>
+          <div><b>Opening hours</b>12:00 PM – 9:00 PM</div>
+        </div>
+        <div class="loc-row">
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></span>
+          <div><b>Phone</b><a href="tel:03183281767">0318 3281767</a></div>
+        </div>
+        <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="https://maps.app.goo.gl/6enXa11Tktm8vdiEA" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn btn-outline" href="tel:03183281767">Call Now</a>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe title="Map: Campus Global Learning Hub, Bahria Enclave, Islamabad" loading="lazy"
+          src="https://www.google.com/maps?q=Campus%20Global%20Learning%20Hub%2C%20Bahria%20Enclave%2C%20Islamabad&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact &amp; Trial Class</span>
+    <h2 class="section-title">Book a trial class or send an enquiry</h2>
+    <p class="section-intro">Call, message on WhatsApp, or fill the form below — we will guide you about subjects, timings and admission for your child's class.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p style="margin-bottom:18px">Tuition support for students in <b>Bahria Enclave and nearby areas of Islamabad</b>. Open daily, 12 PM – 9 PM.</p>
+        <a class="btn btn-primary" href="tel:03183281767">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          Call 0318 3281767
+        </a>
+        <a class="btn btn-wa" href="https://wa.me/923183281767?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20ask%20about%20tuition%20for%20my%20child." target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.8-4.4-3.9-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.1-.2.3-.1.5.1.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 1c.3.1.5.2.5.4.1 0 .1.5-.1 1z"/></svg>
+          WhatsApp Us
+        </a>
+        <p style="margin-top:20px;font-size:14.5px;color:#5B6976">
+          <b style="color:var(--navy)">Address:</b> Basement, Dubai Islamic Bank, Sector A, Bahria Enclave, Islamabad<br>
+          <b style="color:var(--navy)">Hours:</b> 12:00 PM – 9:00 PM, daily
+        </p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-name">Parent / Student name</label>
+            <input id="f-name" type="text" placeholder="e.g. Ahmed Khan">
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone number</label>
+            <input id="f-phone" type="tel" placeholder="e.g. 0300 1234567">
+          </div>
+          <div class="field">
+            <label for="f-grade">Student grade / class</label>
+            <select id="f-grade">
+              <option value="">Select class</option>
+              <option>Class 1–5</option><option>Class 6–8</option>
+              <option>Matric (9–10)</option><option>FSc (11–12)</option>
+              <option>O Level / IGCSE</option><option>A Level</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-subject">Subject needed</label>
+            <input id="f-subject" type="text" placeholder="e.g. Maths, Physics">
+          </div>
+          <div class="field full">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" placeholder="Tell us briefly what help your child needs…"></textarea>
+          </div>
+          <div class="field full">
+            <button class="btn btn-primary" type="button" onclick="sendEnquiry()" style="justify-content:center">Send enquiry on WhatsApp</button>
+            <p class="form-note">Your enquiry opens in WhatsApp so the academy receives it instantly — no email needed.</p>
+            <div id="form-thanks">Thank you! WhatsApp should now open with your enquiry. If it didn't, please call 0318 3281767.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Campus Global Learning Hub</h4>
+        <p>Tuition centre in Bahria Enclave, Islamabad — helping students improve grades, build confidence and prepare for exams with qualified, supportive teachers.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#subjects">Subjects</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#reviews">Google Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:03183281767">0318 3281767</a></li>
+          <li><a href="https://maps.app.goo.gl/6enXa11Tktm8vdiEA" target="_blank" rel="noopener">Basement, Dubai Islamic Bank, Sector A, Bahria Enclave, Islamabad</a></li>
+          <li>Open 12 PM – 9 PM daily</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Campus Global Learning Hub. All rights reserved.</span>
+      <span>Tuition Centre in Bahria Enclave, Islamabad</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Close mobile menu after a link is tapped
+  document.querySelectorAll('#mmenu a').forEach(a =>
+    a.addEventListener('click', () => document.getElementById('mmenu').classList.remove('open'))
+  );
+
+  // Enquiry form -> opens WhatsApp with a pre-filled message (no backend needed)
+  function sendEnquiry(){
+    const v = id => document.getElementById(id).value.trim();
+    const msg =
+      "Assalam o Alaikum, I want to enquire about tuition.%0A" +
+      "Name: "    + encodeURIComponent(v('f-name')    || '-') + "%0A" +
+      "Phone: "   + encodeURIComponent(v('f-phone')   || '-') + "%0A" +
+      "Class: "   + encodeURIComponent(v('f-grade')   || '-') + "%0A" +
+      "Subject: " + encodeURIComponent(v('f-subject') || '-') + "%0A" +
+      "Message: " + encodeURIComponent(v('f-msg')     || '-');
+    document.getElementById('form-thanks').style.display = 'block';
+    window.open("https://wa.me/923183281767?text=" + msg, "_blank");
+  }
+</script>
+</body>
+</html>
